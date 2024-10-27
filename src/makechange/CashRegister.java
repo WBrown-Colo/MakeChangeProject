@@ -22,7 +22,20 @@ public class CashRegister {
 		if (cost > tender)
 			System.out.println("You still owe $" + changeDue + ". Please pay the remaining balance.");
 		else
-			System.out.println("You are owed $" + changeOwed);
+			System.out.println("The customer is owed $" + changeOwed);
+		
+		//User Story #3
+		int changeConvert = ((int)(changeOwed * 100));
+		
+		int twenties = 2000;
+		int tens = 1000;
+		int fives = 500;
+		int singles =  100;
+		int quarters =  25 ;
+		int dimes =  10;
+		int nickels =  5;
+		int pennies = 1;
+		
 		
 		
 		kb.close();
