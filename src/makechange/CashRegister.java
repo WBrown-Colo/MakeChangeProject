@@ -15,8 +15,11 @@ public class CashRegister {
 		System.out.println("Please input the amount of money tendered: ");
 		double tender = kb.nextDouble();
 		
+		double changeDue = (cost - tender);
 		
-		
+		//User Story #3
+		if (cost > tender)
+		System.out.println("You still owe $" + changeDue + ". Please pay the remaining balance.");
 		
 		kb.close();
 	}
