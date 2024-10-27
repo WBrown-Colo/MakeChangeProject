@@ -50,42 +50,42 @@ public class CashRegister {
 		if (twentiesOwed >= 1) {
 			System.out.println("$20: " + twentiesOwed);
 			}
-			int changeConvert1 = changeConvert - (twentiesOwed * 2000);
+		changeConvert = changeConvert - (twentiesOwed / 2000);
 		
 		if (tensOwed >= 1) {
 			System.out.println("$10: " + tensOwed);
 			}
-			int changeConvert2 = changeConvert1 - (tensOwed * 1000);
+		changeConvert = changeConvert - (tensOwed / 1000);
 			
 		if (fivesOwed >= 1) {
 			System.out.println("$5: " + fivesOwed);
 			}
-			int changeConvert3 = changeConvert2 - (fivesOwed * 500);
+		changeConvert = changeConvert - (fivesOwed / 500);
 		
 		if (onesOwed >= 1) {
 			System.out.println("$1: " + onesOwed);
 			}
-			int changeConvert4 = changeConvert3 - (onesOwed * 100);
+		changeConvert = changeConvert - (onesOwed / 100);
 			
 		if (quartersOwed >= 1) {
 			System.out.println("$0.25: " + quartersOwed);
 			}
-			int changeConvert5 = changeConvert4 - (quartersOwed * 50);
+		changeConvert = changeConvert - (quartersOwed / 50);
 			
 		if (dimesOwed >= 1) {
 			System.out.println("$0.10: " + dimesOwed);
 			}
-			int changeConvert6 = changeConvert5 - (dimesOwed * 10);
+		changeConvert = changeConvert - (dimesOwed / 10);
 			
 		if (nickelsOwed >= 1) {
 			System.out.println("$0.05: " + nickelsOwed);
 			}
-			int changeConvert7 = changeConvert6 - (nickelsOwed * 5);
+		changeConvert = changeConvert - (nickelsOwed / 5);
 			
 		if (penniesOwed >= 1) {
 			System.out.println("$0.01: " + penniesOwed);
 			}
-			int changeConvert8 = changeConvert7 - (penniesOwed * 1);
+		changeConvert = changeConvert - (penniesOwed / 1);
 		
 		
 		
