@@ -37,56 +37,61 @@ public class CashRegister {
 		
 		
 		int twentiesOwed = (changeConvert / 2000);
-		int tensOwed = (changeConvert / 1000);
-		int fivesOwed = (changeConvert / 500);
-		int onesOwed = (changeConvert / 100);
-		int quartersOwed = (changeConvert/25);
-		int dimesOwed = (changeConvert / 10);
-		int nickelsOwed = (changeConvert / 5);
-		int penniesOwed = (changeConvert / 1);
+		changeConvert = changeConvert - twentiesOwed * 2000;
 		
+		int tensOwed = (changeConvert / 1000);
+		changeConvert = changeConvert - tensOwed * 1000;
+		
+		int fivesOwed = (changeConvert / 500);
+		changeConvert = changeConvert - fivesOwed * 500;
+		
+		int onesOwed = (changeConvert / 100);
+		changeConvert = changeConvert - onesOwed * 100;
+		
+		int quartersOwed = (changeConvert / 25);
+		changeConvert = changeConvert - quartersOwed * 25;
+		
+		int dimesOwed = (changeConvert / 10);
+		changeConvert = changeConvert - dimesOwed * 10;
+		
+		int nickelsOwed = (changeConvert / 5);
+		changeConvert = changeConvert - nickelsOwed * 05;
+		
+		int penniesOwed = (changeConvert / 1);
+		changeConvert = changeConvert - penniesOwed * 01;
 		
 		
 		if (twentiesOwed >= 1) {
 			System.out.println("$20: " + twentiesOwed);
 			}
-		changeConvert = changeConvert - (twentiesOwed / 2000);
 		
 		if (tensOwed >= 1) {
 			System.out.println("$10: " + tensOwed);
 			}
-		changeConvert = changeConvert - (tensOwed / 1000);
 			
 		if (fivesOwed >= 1) {
 			System.out.println("$5: " + fivesOwed);
 			}
-		changeConvert = changeConvert - (fivesOwed / 500);
 		
 		if (onesOwed >= 1) {
 			System.out.println("$1: " + onesOwed);
 			}
-		changeConvert = changeConvert - (onesOwed / 100);
 			
 		if (quartersOwed >= 1) {
 			System.out.println("$0.25: " + quartersOwed);
 			}
-		changeConvert = changeConvert - (quartersOwed / 50);
 			
 		if (dimesOwed >= 1) {
 			System.out.println("$0.10: " + dimesOwed);
 			}
-		changeConvert = changeConvert - (dimesOwed / 10);
 			
 		if (nickelsOwed >= 1) {
 			System.out.println("$0.05: " + nickelsOwed);
 			}
-		changeConvert = changeConvert - (nickelsOwed / 5);
 			
 		if (penniesOwed >= 1) {
 			System.out.println("$0.01: " + penniesOwed);
 			}
-		changeConvert = changeConvert - (penniesOwed / 1);
-		
 		
 		
 		kb.close();
